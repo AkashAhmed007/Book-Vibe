@@ -1,13 +1,12 @@
 import './App.css'
-import NavBar from './components/NavBar'
+import MainLayout from './MainLayout/MainLayout'
+
 
 function App() {
 
   return (
     <>
-      
-      <NavBar></NavBar>
-      
+      <MainLayout></MainLayout>
     </>
   )
 }
