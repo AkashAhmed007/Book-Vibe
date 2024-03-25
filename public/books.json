@@ -1,0 +1,81 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.ibb.co/L6BZRqk/book1.png",
+      "review": "A timeless classic that explores the decadence and moral decay of the Roaring Twenties.",
+      "totalPages": 180,
+      "rating": 4.5,
+      "category": "Fiction",
+      "tags": ["Classic", "Romance", "Drama"],
+      "publisher": "Scribner",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 2,
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "https://i.ibb.co/3zwC5Rk/book2.png",
+      "review": "A powerful narrative that addresses racial injustice and moral growth in a small Southern town.",
+      "totalPages": 281,
+      "rating": 4.8,
+      "category": "Fiction",
+      "tags": ["Classic", "Legal Drama", "Coming-of-Age"],
+      "publisher": "J. B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 3,
+      "bookName": "1984",
+      "author": "George Orwell",
+      "image": "https://i.ibb.co/KqtJ8ZF/book3.png",
+      "review": "A dystopian masterpiece that warns against totalitarianism and the erosion of individual freedom.",
+      "totalPages": 328,
+      "rating": 4.7,
+      "category": "Fiction",
+      "tags": ["Dystopian", "Political Fiction", "Social Commentary"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "bookId": 4,
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "https://i.ibb.co/QJH5kqt/book4.png",
+      "review": "An iconic portrayal of teenage angst and alienation in post-war America.",
+      "totalPages": 277,
+      "rating": 4.3,
+      "category": "Fiction",
+      "tags": ["Coming-of-Age", "Literary Fiction", "Rebellion"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": 5,
+      "bookName": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "image": "https://i.ibb.co/YR2kqfT/book5.png",
+      "review": "A charming adventure tale set in Middle-earth, perfect for readers of all ages.",
+      "totalPages": 310,
+      "rating": 4.6,
+      "category": "Fantasy",
+      "tags": ["Adventure", "Middle-earth", "Quest"],
+      "publisher": "Allen & Unwin",
+      "yearOfPublishing": 1937
+    },
+    {
+      "bookId": 6,
+      "bookName": "Harry Potter and the Philosopher's Stone",
+      "author": "J.K. Rowling",
+      "image": "https://i.ibb.co/L6BZRqk/book1.png",
+      "review": "A magical journey that introduces readers to the enchanting world of Hogwarts and the boy who lived.",
+      "totalPages": 320,
+      "rating": 4.9,
+      "category": "Fantasy",
+      "tags": ["Magic", "Wizardry", "Friendship"],
+      "publisher": "Bloomsbury Publishing",
+      "yearOfPublishing": 1997
+    }
+  ]
+  
