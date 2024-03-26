@@ -11,8 +11,8 @@ export default function Books() {
 		</div>
 		<div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 			{
-                books.map(book=><Book key={book.bookId} book={book}></Book>)
-            }
+        books.map(book=><Book key={book.bookId} book={book}></Book>)
+      }
 			
 		</div>
 	</div>

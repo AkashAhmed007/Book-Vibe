@@ -6,7 +6,7 @@ import MainLayout from './MainLayout/MainLayout.jsx'
 import Home from './pages/Home.jsx'
 import ListedBooks from './pages/ListedBooks.jsx'
 import PagesToRead from './pages/PagesToRead.jsx'
-
+import BookDetailsPage from './pages/BookDetailsPage.jsx'
 const router = createBrowserRouter([
   {
     path:'/',
@@ -18,15 +18,22 @@ const router = createBrowserRouter([
         loader:()=> fetch('books.json')
       },
       {
+        path:'/book/:bookId',
+        element:<BookDetailsPage></BookDetailsPage>,
+        // loader:({params})=>fetch(`books.json/${params.bookId}`)
+      },
+      {
         path:'/listedbooks',
         element:<ListedBooks></ListedBooks>
       },
       {
         path:'/pagetoread',
         element: <PagesToRead></PagesToRead>
-      }
+      },
+      
     ]
   }
+  
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
