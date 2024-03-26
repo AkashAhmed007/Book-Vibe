@@ -1,9 +1,12 @@
-import {Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Book({book}) {
-    const{image,tags,bookName,author,category,rating,bookId}= book
+const{image,tags,bookName,author,category,rating,bookId}= book;
+
   return (
-    <Link to={`/book/${bookId}`} className="card bg-base-100 border shadow-xl">
+    <>
+    <NavLink to ={`/book/${bookId}`}>
+        <div  className="card bg-base-100 border shadow-xl">
         <figure className="px-10 pt-10">
             <img src={image} alt="Shoes" className="rounded-xl w-1/2" />
         </figure>
@@ -21,6 +24,10 @@ export default function Book({book}) {
                 <p>{rating}</p>
             </div>
         </div>
-    </Link>
+        </div>
+        
+    </NavLink>
+    
+    </>
   )
 }

@@ -1,4 +1,12 @@
+import { useEffect, useState } from "react"
+import { getDataFromLocalStore } from "../utilities/Utilities";
+
 export default function ListedBooks() {
+  const [listedBooks,setListedBooks] = useState([]);
+  useEffect(()=>{
+    const data = getDataFromLocalStore();
+    setListedBooks(data);
+  },[])
   return (
     <div>
       <h1 className="text-center bg-gray-200 w-full p-8 font-bold text-2xl rounded-2xl">Books</h1>
@@ -10,7 +18,6 @@ export default function ListedBooks() {
           <option>Published Year</option>
         </select>
       </div>
-
     <div className="flex space-y-4 mb-4">
       <a rel="noopener noreferrer" href="#" className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-b dark:border-gray-600 dark:text-gray-600">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
@@ -27,17 +34,25 @@ export default function ListedBooks() {
       </a>
     </div>
 
-
-    <div className="card card-side bg-base-100 shadow-xl">
-  <figure><img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie"/></figure>
-  <div className="card-body">
-    <h2 className="card-title">New movie is released!</h2>
-    <p>Click the button to watch on Jetflix app.</p>
-    <div className="card-actions">
-      <button className="btn btn-primary">Watch</button>
+{
+  listedBooks.map(book => (<div className="card card-side bg-base-100 shadow-xl">
+  <figure><img className="w-1/2" src={book.image} alt="Movie"/></figure>
+    <div className="card-body">
+      <h2 className="card-title">{book.bookName}</h2>
+      <p>By: {book.author}</p>
+      <p>{book.tags.map(tag=>(<a className="text-green-600">#{tag}</a>))}</p>
+      <p>Year of publishing: {book.yearOfPublishing}</p>
+      <p>Publisher:{book.publisher}</p>
+      <p>Page:{book.totalPages}</p>
+      <p>Category:{book.category}</p>
+      <p>Rating:{book.rating}</p>
+      <div className="card-actions">
+        <button className="btn btn-primary">Watch</button>
+      </div>
     </div>
-  </div>
-</div>
+</div>))
+}
+    
 </div>
   )
 }
