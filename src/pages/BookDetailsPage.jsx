@@ -1,13 +1,17 @@
 import { useLoaderData, useParams } from "react-router-dom"
 import { saveToLocalStorage } from "../utilities/Utilities";
+import {saveDataForWishList} from "../utilities/Utilities"
 export default function BookDetailsPage() { 
     const books = useLoaderData();
     const {bookId} = useParams();
     const singleBook = books.find(b => b.bookId == bookId);
     const {image,author,bookName,category,review,tags,rating,publisher,totalPages,yearOfPublishing}=singleBook;
 
-    const handleReadbutton =()=>{
+    const handleReadButton =()=>{
         saveToLocalStorage(singleBook);
+    }
+    const handleWishListButton =()=>{
+        saveDataForWishList(singleBook);
     }
 return (
     <div className="hero bg-base-200">
@@ -28,8 +32,8 @@ return (
         <p className="mb-2">Publisher: {publisher} </p>
         <p className="mb-2">Year of Publishing: {yearOfPublishing}</p>
         <p className="mb-2">Rating: {rating}</p>
-        <button onClick={handleReadbutton}className="btn border-gray-400 border-2  mr-3 px-6 py-2 rounded-xl">Read</button>
-        <button className="btn btn-accent">Wishlist</button>
+        <button onClick={handleReadButton}className="btn border-gray-400 border-2  mr-3 px-6 py-2 rounded-xl">Read</button>
+        <button onClick={handleWishListButton} className="btn btn-accent">Wishlist</button>
         </div>
     </div>
     

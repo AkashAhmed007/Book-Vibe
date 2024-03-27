@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { getDataFromLocalStore } from "../utilities/Utilities";
 import { IoPeopleSharp } from "react-icons/io5";
 import { MdOutlineContactPage } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 export default function ListedBooks() {
   const [listedBooks,setListedBooks] = useState([]);
@@ -41,14 +42,14 @@ export default function ListedBooks() {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
           <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
         </svg>
-        <span>Read Books</span>
+        <NavLink to='/read'>Read Books</NavLink>
       </a>
       <a rel="noopener noreferrer" href="#" className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border border-b-0 rounded-t-lg dark:border-gray-600 dark:text-gray-900">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
           <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
           <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
         </svg>
-        <span>Wishlist Books</span>
+        <NavLink to="/wishlist">Wishlist Books</NavLink>
       </a>
     </div>
 {
@@ -76,7 +77,7 @@ export default function ListedBooks() {
       <div className="flex justify-start w-96 gap-3 mt-2">
         <p className="bg-[rgba(50,142,255,0.15)] text-[rgb(50,142,255)] rounded-full px-4 py-2">Category:{book.category}</p>
         <p className="bg-[rgba(255,172,51,0.15)]  rounded-full px-4 py-2 ">Rating:{book.rating}</p>
-        <button className="btn rounded-full bg-[rgb(35,190,10)] text-white">View details</button>
+        <NavLink to ={`/book/${book.bookId}`} className="btn rounded-full bg-[rgb(35,190,10)] text-white">View details</NavLink>
       </div>
     </div>
 </div>))

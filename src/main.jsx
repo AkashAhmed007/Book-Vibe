@@ -9,6 +9,8 @@ import PagesToRead from './pages/PagesToRead.jsx'
 import BookDetailsPage from './pages/BookDetailsPage.jsx'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ReadBook from './pages/ReadBook.jsx'
+import WishList from './pages/WishList.jsx'
 const router = createBrowserRouter([
   {
     path:'/',
@@ -27,6 +29,15 @@ const router = createBrowserRouter([
       {
         path:'/listedbooks',
         element:<ListedBooks></ListedBooks>
+      },
+      {
+        path:'/read',
+        element:<ReadBook></ReadBook>,
+        loader:()=> fetch('books.json')
+      },
+      {
+        path:"/wishlist",
+        element:<WishList></WishList>
       },
       {
         path:'/pagetoread',
