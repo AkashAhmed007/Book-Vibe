@@ -7,13 +7,13 @@ const{image,tags,bookName,author,category,rating,bookId}= book;
     <>
     <NavLink to ={`/book/${bookId}`}>
     <div className="card bg-base-100 shadow-xl">
-        <figure className="px-10 pt-10 border-2xl p-5 m-5">
+        <figure className="lg:px-10 px-5 lg:pt-10 pt-5 border-2xl lg:p-5 lg:m-5">
             <img src={image} alt="book"/>
         </figure>
         <div className="card-body">
             <div className="flex items-center gap-2">
             {
-              tags.map(tag=>(<a className="text-green-600">{tag}</a>))
+              tags.map(tag=>(<a className="text-green-600">#{tag}</a>))
             }
             </div>
             <h2 className="card-title">{bookName}</h2>

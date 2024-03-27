@@ -18,7 +18,7 @@ return (
     <div className="hero-content flex-col lg:flex-row">
         <img src={image} className="max-w-sm w-1/3 rounded-lg shadow-2xl mr-5" />
         <div>
-        <h1 className="text-5xl font-bold mb-2">{bookName}</h1>
+        <h1 className="lg:text-5xl text-3xl font-bold mb-2">{bookName}</h1>
         <p className="mb-2">By: {author}</p>
         <p className="border-b"></p>
         <p>{category}</p>

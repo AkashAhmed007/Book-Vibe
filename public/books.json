@@ -66,9 +66,9 @@
     },
     {
       "bookId": 6,
-      "bookName": "Harry Potter and the Philosopher's Stone",
+      "bookName": "Philosopher's Stone",
       "author": "J.K. Rowling",
-      "image": "https://i.ibb.co/RhD00qR/kindpng-2193744-1.png",
+      "image": "https://i.ibb.co/sJbRcH4/kindpng-2592315-1.png",
       "review": "A magical journey that introduces readers to the enchanting world of Hogwarts and the boy who lived.",
       "totalPages": 320,
       "rating": 4.9,
@@ -79,42 +79,42 @@
     },
     {
       "bookId": 7,
-      "bookName": "Harry Potter and the Philosopher's Stone",
-      "author": "J.K. Rowling",
+      "bookName": "The Silent Witness",
+      "author": "Emily Davidson",
       "image": "https://i.ibb.co/MnYfKZq/kindpng-1064993.png",
       "review": "A magical journey that introduces readers to the enchanting world of Hogwarts and the boy who lived.",
       "totalPages": 320,
-      "rating": 4.9,
-      "category": "Fantasy",
-      "tags": ["Magic", "Wizardry"],
+      "rating": 4.2,
+      "category": "Mystery",
+      "tags": ["Psychological", "Thriller"],
       "publisher": "Bloomsbury Publishing",
-      "yearOfPublishing": 1997
+      "yearOfPublishing": 1967
     }
     ,{
       "bookId": 8,
-      "bookName": "Harry Potter and the Philosopher's Stone",
-      "author": "J.K. Rowling",
+      "bookName": "The Midnight Library",
+      "author": "Matt Haig",
       "image": "https://i.ibb.co/xH7FjhM/kindpng-4022054-1.png",
       "review": "A magical journey that introduces readers to the enchanting world of Hogwarts and the boy who lived.",
-      "totalPages": 320,
-      "rating": 4.9,
+      "totalPages": 355,
+      "rating": 4.4,
       "category": "Fantasy",
       "tags": ["Magic", "Wizardry"],
       "publisher": "Bloomsbury Publishing",
-      "yearOfPublishing": 1997
+      "yearOfPublishing": 1977
     },
     {
       "bookId": 9,
-      "bookName": "Harry Potter and the Philosopher's Stone",
-      "author": "J.K. Rowling",
-      "image": "https://i.ibb.co/sJbRcH4/kindpng-2592315-1.png",
+      "bookName": "Project Hail Mary",
+      "author": "Andy Weir",
+      "image": "https://i.ibb.co/RhD00qR/kindpng-2193744-1.png",
       "review": "A magical journey that introduces readers to the enchanting world of Hogwarts and the boy who lived.",
       "totalPages": 320,
-      "rating": 4.9,
+      "rating": 4.6,
       "category": "Fantasy",
-      "tags": ["Magic", "Wizardry"],
+      "tags": ["Adventure", "Survival"],
       "publisher": "Bloomsbury Publishing",
-      "yearOfPublishing": 1997
+      "yearOfPublishing": 1987
     }
    
   ]
