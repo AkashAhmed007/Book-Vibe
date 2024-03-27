@@ -3,20 +3,36 @@ import { getDataFromLocalStore } from "../utilities/Utilities";
 
 export default function ListedBooks() {
   const [listedBooks,setListedBooks] = useState([]);
+  const [filterBooks,setFilterBooks] = useState([]);
+
   useEffect(()=>{
     const data = getDataFromLocalStore();
     setListedBooks(data);
   },[])
+  const handleFilterBooks = filter =>{
+    if(filter === 'rating'){
+      const sortByRating = listedBooks.sort((a,b)=> parseFloat(b.rating) - parseFloat(a.rating));
+      setFilterBooks(sortByRating);
+    }else if(filter === 'pages'){
+        const sortByPages = listedBooks.sort((a,b)=> parseFloat(b.totalPages) - parseFloat(a.totalPages));
+        setFilterBooks(sortByPages);
+      }else if (filter === 'year'){
+        const sortByYear = listedBooks.sort((a,b)=> parseFloat(b.yearOfPublishing) - parseFloat(a.yearOfPublishing));
+        setFilterBooks(sortByYear);
+      }
+}
   return (
     <div>
       <h1 className="text-center bg-gray-200 w-full p-8 font-bold text-2xl rounded-2xl">Books</h1>
       <div className="text-center mt-5">
-        <select className="select bg-[rgb(35,190,10)]">
-          <option disabled selected className="text-white">Sort By</option>
-          <option>Rating</option>
-          <option>Number of Pages</option>
-          <option>Published Year</option>
-        </select>
+      <div className="dropdown bg-[rgb(35,190,10)]">
+        <div tabIndex={0} role="button" className="btn m-1">Sort By</div>
+          <ul tabIndex={0} className="dropdown-content z-[1] menu p-2  w-52">
+          <li onClick={()=>handleFilterBooks('rating')}><a>Rating</a></li>
+          <li onClick={()=>handleFilterBooks('pages')}><a>Number of Pages</a></li>
+          <li onClick={()=>handleFilterBooks('year')}><a>Publisher Year</a></li>
+        </ul>
+    </div>
       </div>
     <div className="flex space-y-4 mb-4">
       <a rel="noopener noreferrer" href="#" className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-b dark:border-gray-600 dark:text-gray-600">
@@ -33,7 +49,6 @@ export default function ListedBooks() {
         <span>Wishlist Books</span>
       </a>
     </div>
-
 {
   listedBooks.map(book => (<div className="card card-side bg-base-100 shadow-xl">
   <figure><img className="w-1/2" src={book.image} alt="Movie"/></figure>
