@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export default function Banner() {
   
   return (
@@ -7,7 +9,7 @@ export default function Banner() {
         <div>
         <p className="text-5xl font-bold py-6 leading-relaxed">Books to freshen up <br />
         your bookShelf </p>
-        <button className="btn text-white bg-[rgb(35,190,10)]">View The List</button>
+        <NavLink to='/listedbooks' className="btn text-white bg-[rgb(35,190,10)]">View The List</NavLink>
         </div>
     </div>
     </div>

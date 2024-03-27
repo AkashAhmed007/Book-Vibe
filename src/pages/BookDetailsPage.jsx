@@ -28,10 +28,11 @@ return (
         <p>Publisher: {publisher} </p>
         <p>Year of Publishing: {yearOfPublishing}</p>
         <p>Rating: {rating}</p>
-        <button onClick={handleReadbutton} className="btn btn-primary">Read</button>
+        <button onClick={handleReadbutton}className="btn btn-primary">Read</button>
         <button className="btn btn-primary">Wishlist</button>
         </div>
     </div>
+    
 </div>
   )
 }

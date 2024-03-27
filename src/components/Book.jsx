@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-
 export default function Book({book}) {
 const{image,tags,bookName,author,category,rating,bookId}= book;
 
