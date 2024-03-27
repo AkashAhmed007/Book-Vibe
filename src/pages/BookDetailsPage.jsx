@@ -10,26 +10,26 @@ export default function BookDetailsPage() {
         saveToLocalStorage(singleBook);
     }
 return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero bg-base-200">
     <div className="hero-content flex-col lg:flex-row">
-        <img src={image} className="max-w-sm w-full rounded-lg shadow-2xl" />
+        <img src={image} className="max-w-sm w-1/3 rounded-lg shadow-2xl mr-5" />
         <div>
-        <h1 className="text-5xl font-bold">{bookName}</h1>
-        <p>By: {author}</p>
-        <hr />
+        <h1 className="text-5xl font-bold mb-2">{bookName}</h1>
+        <p className="mb-2">By: {author}</p>
+        <p className="border-b"></p>
         <p>{category}</p>
-        <hr />
-        <p className="py-6">Review: {review}</p>
+        <p className="border-b"></p>
+        <p className="py-2">Review: {review}</p>
         <p>Tags :{
             tags.map(tag=>(<a className="text-green-600">#{tag}</a>))
         }</p>
-        <hr />
-        <p>Number of pages: {totalPages}</p>
-        <p>Publisher: {publisher} </p>
-        <p>Year of Publishing: {yearOfPublishing}</p>
-        <p>Rating: {rating}</p>
-        <button onClick={handleReadbutton}className="btn btn-primary mr-5">Read</button>
-        <button className="btn btn-primary">Wishlist</button>
+        <p className="mb-2"></p>
+        <p className="mb-2">Number of pages: {totalPages}</p>
+        <p className="mb-2">Publisher: {publisher} </p>
+        <p className="mb-2">Year of Publishing: {yearOfPublishing}</p>
+        <p className="mb-2">Rating: {rating}</p>
+        <button onClick={handleReadbutton}className="btn border-gray-400 border-2  mr-3 px-6 py-2 rounded-xl">Read</button>
+        <button className="btn btn-accent">Wishlist</button>
         </div>
     </div>
     
