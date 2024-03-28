@@ -30,7 +30,7 @@ export default function ListedBooks() {
       <div className="text-center mt-5">
         <div className="dropdown bg-[rgb(35,190,10)]">
           <div tabIndex={0} role="button" className="btn m-1">Sort By</div>
-            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2  w-52">
+            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 w-52 bg-gray-400 text-black rounded-xl lg:mb-5 mb-3">
             <li onClick={()=>handleFilterBooks('rating')}><a>Rating</a></li>
             <li onClick={()=>handleFilterBooks('pages')}><a>Number of Pages</a></li>
             <li onClick={()=>handleFilterBooks('year')}><a>Publisher Year</a></li>

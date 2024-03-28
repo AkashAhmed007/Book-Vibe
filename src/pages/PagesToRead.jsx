@@ -23,7 +23,8 @@ const TriangleBar = (props) => {
 
 
   return (
-    <BarChart
+    <div className='lg:w-full sm:w-3/4'>
+      <BarChart
       width={1000}
       height={500}
       data={data}
@@ -44,6 +45,7 @@ const TriangleBar = (props) => {
         ))}
       </Bar>
     </BarChart>
+    </div>
   );
 }
 
