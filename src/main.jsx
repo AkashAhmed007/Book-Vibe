@@ -11,20 +11,23 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ReadBook from './pages/ReadBook.jsx'
 import WishList from './pages/WishList.jsx'
+import ErroPage from './components/ErroPage.jsx'
 const router = createBrowserRouter([
   {
     path:'/',
     element:<MainLayout></MainLayout>,
+    errorElement: <ErroPage></ErroPage>,
     children:[
       {
         path:'/',
         element:<Home></Home>,
-        loader:()=> fetch('books.json')
+        loader:()=> fetch('books.json'),
       },
       {
         path:'/book/:bookId',
         element:<BookDetailsPage></BookDetailsPage>,
-        loader:()=> fetch('books.json')
+        loader:()=> fetch('books.json'),
+        errorElement: <ErroPage></ErroPage>
       },
       {
         path:'/listedbooks',
@@ -45,7 +48,8 @@ const router = createBrowserRouter([
       },
       
     ]
-  }
+  },
+ 
  
   
 ])
