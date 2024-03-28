@@ -1,8 +1,20 @@
-# React + Vite
+# Website Name: 
+- Book Vibe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Website live Link: 
+- https:bookvibe.com
+# Features and Characteristics:
 
-Currently, two official plugins are available:
+- Dynamic Book List: Browse through a dynamically generated list of books, sorted by categories such as genre, author, or user ratings.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Interactive Book Management: Add new books to the listed books page with ease using the intuitive "Add Book" feature. Users can input book details like title, author, genre, and total pages.
+
+- Personalized Reading Experience: Utilize the "Read" and "Wishlist" buttons to dynamically update your reading progress and wishlist status. These buttons interact with local storage to ensure your preferences are saved and accessible across sessions.
+
+- Custom Shape Bar Chart: Visualize your reading progress with a unique custom shape bar chart. Each bar represents a book from your read list, displaying the book's name against its total pages. This visually engaging chart offers insights into your reading habits at a glance.
+
+- User-Friendly Interface: Enjoy a seamless and intuitive user experience designed to cater to book enthusiasts of all ages. With clean navigation and clear call-to-action buttons, Book Vibe makes exploring and managing your book collection a breeze.
+
+
+
+
